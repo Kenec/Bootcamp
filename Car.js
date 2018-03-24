@@ -72,7 +72,7 @@ class Vehicle{
     }
 
   }
-  class Jeep extends Vehicle {
+  class SUV extends Vehicle {
     constructor(name,model,noOfTire,color,bulletProof,fourWheel) {
       super(name,model,noOfTire,color);
       this.bulletProof = bulletProof;
@@ -94,7 +94,32 @@ class Vehicle{
     }
 
   }
+
+ class Truck extends Vehicle {
+    constructor(name,model,noOfTire,color,bulletProof,fourWheel) {
+      super(name,model,noOfTire,color);
+      this.bulletProof = bulletProof;
+      this.fourWheel = fourWheel;
+      this.engine = "Power8";
+      console.log("BulletProof: "+this.bulletProof+"\nFourWheel: "+this.fourWheel+"\nEngine: "+this.engine);
+    }
+
+    //acceralating
+    acceralate(){
+      if((this.gear !== 0) && (this.gear !== 6)){
+        this.speed = this.speed + 8;
+        this.position = this.position + 10;
+      } else{
+        super.changeForwardGear();
+        this.speed = this.speed + 8;
+        this.position = this.position + 10;
+      }
+    }
+
+  }
+
 module.exports = {
   Vehicle: Vehicle,
-  Jeep: Jeep
+  Jeep: Jeep,
+  Truck: Truck
 }
