@@ -1,0 +1,19 @@
+{
+  "name": "bootcamp_day0_kene",
+  "version": "1.0.0",
+  "description": "",
+  "main": "labs.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.0.2",
+    "mocha": "^3.4.2"
+  }
+}
